@@ -35,3 +35,11 @@ class TraceRecorder(Protocol):
     def record(self, event: str, payload: dict[str, Any]) -> None:
         """Record a named event and its payload."""
         ...
+
+
+class ResearchPort(Protocol):
+    """Provide optional public evidence independently of sandbox tools."""
+
+    def search_github(self, query: str) -> dict:
+        """Return a small evidence record for a GitHub code search."""
+        ...
